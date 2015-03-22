@@ -1,8 +1,7 @@
 (function() {
   angular
-    .module('plunker', [])
+    .module('sift', [])
     .controller('PanelFilter', PanelFilter);
-
 
   function PanelFilter() {
     var vm = this;
