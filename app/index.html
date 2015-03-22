@@ -4,9 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>Sift</title>
-    <script>
-    document.write('<base href="' + document.location + '" />');
-    </script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css" />
@@ -18,40 +15,96 @@
     <br/>
     <br/>
     <div class="container">
-        <div class="panel panel-default" ng-controller="PanelFilter as panel" ng-init="panel.setUrl('http://jsonplaceholder.typicode.com/posts')">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="form-group">
-                            <input type="text" ng-model="panel.titleFilter" class="form-control" id="exampleInputEmail3" placeholder="Filter by title...">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>Albums</h1>
+                <p>This fetches albums from <a href="http://jsonplaceholder.typicode.com/albums"><i>http://jsonplaceholder.typicode.com/albums</i></a></p>
+                <div class="panel panel-default" ng-controller="PanelFilter as panel" ng-init="panel.setUrl('http://jsonplaceholder.typicode.com/albums')">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <input type="text" ng-model="panel.titleFilter" class="form-control" id="exampleInputEmail3" placeholder="Filter by title...">
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-click="panel.showSelected()">Selected only
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-xs-6">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" ng-click="panel.showSelected()">Selected only
-                            </label>
+                    <div class="panel-body" ng-if="{{panel.loading || panel.errors}}">
+                        <div ng-if="panel.loading" class="text-center">
+                            <i class="fa fa-refresh fa-spin fa-2x"></i>
+                            <p>Loading items</p>
+                        </div>
+                        <div ng-if="panel.errors" class="alert alert-warning text-center">
+                            <i class="fa fa-warning"></i> {{panel.errors}}
                         </div>
                     </div>
+                    <ul class="list-group list-striped list-hover panel-filter-list">
+                        <li ng-click="panel.toggleSelected(item.id)" class="list-group-item" ng-class="{'selected': panel.isSelected(item.id)}" ng-repeat="item in panel.currentItems | filter:panel.titleFilter | orderBy:'title'">
+                            <i ng-if="!panel.isSelected(item.id)" class="fa fa-circle-thin"></i>
+                            <i ng-if="panel.isSelected(item.id)" class="fa fa-check"></i> {{item.title}}
+                        </li>
+                    </ul>
+                    <input type="hidden" name="selected_items" value="{{panel.selectedItems.toString()}}">
                 </div>
+
             </div>
-            <div class="panel-body">
-                <div ng-if="panel.loading" class="text-center">
-                    <i class="fa fa-refresh fa-spin fa-2x"></i>
-                    <p>Loading items</p>
+            <div class="col-sm-6">
+                <h1>Posts</h1>
+                <p>This fetches posts from <a href="http://jsonplaceholder.typicode.com/posts"><i>http://jsonplaceholder.typicode.com/posts</i></a></p>
+                <div class="panel panel-default" ng-controller="PanelFilter as panel" ng-init="panel.setUrl('http://jsonplaceholder.typicode.com/posts')">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <input type="text" ng-model="panel.titleFilter" class="form-control" id="exampleInputEmail3" placeholder="Filter by title...">
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-click="panel.showSelected()">Selected only
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body" ng-if="{{panel.loading || panel.errors}}">
+                        <div ng-if="panel.loading" class="text-center">
+                            <i class="fa fa-refresh fa-spin fa-2x"></i>
+                            <p>Loading items</p>
+                        </div>
+                        <div ng-if="panel.errors" class="alert alert-warning text-center">
+                            <i class="fa fa-warning"></i> {{panel.errors}}
+                        </div>
+                    </div>
+                    <ul class="list-group list-striped list-hover panel-filter-list">
+                        <li ng-click="panel.toggleSelected(item.id)" class="list-group-item" ng-class="{'selected': panel.isSelected(item.id)}" ng-repeat="item in panel.currentItems | filter:panel.titleFilter | orderBy:'title'">
+                            <i ng-if="!panel.isSelected(item.id)" class="fa fa-circle-thin"></i>
+                            <i ng-if="panel.isSelected(item.id)" class="fa fa-check"></i> {{item.title}}
+                        </li>
+                    </ul>
+                    <input type="hidden" name="selected_items" value="{{panel.selectedItems.toString()}}">
                 </div>
-                <div ng-if="panel.errors" class="alert alert-warning text-center">
-                  <i class="fa fa-warning"></i> {{panel.errors}}
-                </div>
+
+
             </div>
-            <ul class="list-group list-striped list-hover panel-filter-list">
-                <li ng-click="panel.toggleSelected(item.id)" class="list-group-item" ng-class="{'selected': panel.isSelected(item.id)}" ng-repeat="item in panel.currentItems | filter:panel.titleFilter | orderBy:'title'">
-                    <i ng-if="!panel.isSelected(item.id)" class="fa fa-circle-thin"></i>
-                    <i ng-if="panel.isSelected(item.id)" class="fa fa-check"></i> {{item.title}}
-                </li>
-            </ul>
-            <input type="hidden" name="selected_items" value="{{panel.selectedItems.toString()}}">
         </div>
+
+
+
+
+
+
+
+
+
     </div>
 
 </body>
