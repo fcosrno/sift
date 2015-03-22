@@ -6,12 +6,11 @@ Check, filter and sort carefully through a list of scrollable items. Available a
 ###[0.1.0]
 - ~~Add Restangular~~ Add $http (Restangular is overkill for  now)
 - Show loader while items load
-- Improve documentation
+- Move tools to panel header
 
 ###[0.2.0]
 - Add clear button in filter input
 - Display count of items
-- Move tools to panel header
 
 ###[0.3.0]
 - Allow "Sort by x (ascending order)" in gear dropdown menu
