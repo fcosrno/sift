@@ -11,8 +11,8 @@
             getItems: getItems
         };
 
-        function getItems() {
-            return $http.get('http://jsonplaceholder.typicode.com/posts')
+        function getItems(url) {
+            return $http.get(url)
                 .then(getItemsComplete)
                 .catch(getItemsFailed);
 
@@ -30,6 +30,8 @@
 
     function PanelFilter(DataService) {
         var vm = this;
+        // vm.url = 'http://jsonplaceholder.typicode.com/posts';
+        vm.setUrl = setUrl;
         vm.loading = true;
         vm.errors = null;
         vm.selectedItems = vm.items = vm.currentItems = [];
@@ -38,8 +40,12 @@
         vm.showSelectedStatus = false;
         vm.isSelected = isSelected;
 
-        activate();
 
+        function setUrl(url){
+          vm.url = url;
+          activate();
+        }
+        
         function activate() {
             return getItems().then(function() {
                 vm.loading = false;
@@ -48,7 +54,7 @@
         }
 
         function getItems() {
-            return DataService.getItems()
+            return DataService.getItems(vm.url)
                 .then(function(data) {
                     vm.items = vm.currentItems = data;
                     return vm.items;
