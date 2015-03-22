@@ -1,44 +1,25 @@
 (function() {
   angular
-    .module('sift', [])
+    .module('sift', ['restangular'])
     .controller('PanelFilter', PanelFilter);
 
-  function PanelFilter() {
+  PanelFilter.$inject = ['$scope','Restangular'];
+  function PanelFilter($scope,Restangular) {
     var vm = this;
-    vm.selectedItems = [];
+    vm.selectedItems = vm.items = vm.currentItems = [];
     vm.toggleSelected = toggleSelected;
     vm.showSelected = showSelected;
     vm.showSelectedStatus = false;
     vm.isSelected = isSelected;
-    vm.items = [{
-      id: 1,
-      title: 'Cras justo odio'
-    }, {
-      id: 2,
-      title: 'Dapibus ac facilisis in'
-    }, {
-      id: 3,
-      title: 'Morbi leo risus'
-    }, {
-      id: 4,
-      title: 'Porta ac consectetur ac'
-    }, {
-      id: 5,
-      title: 'Vestibulum at eros'
-    }, {
-      id: 6,
-      title: 'Egestas eget quam'
-    }, {
-      id: 7,
-      title: 'Nullam id dolor id nibh ultricies'
-    }, {
-      id: 8,
-      title: 'Consectetuer adipiscing elit'
-    }, {
-      id: 9,
-      title: 'Vel illum dolore eu feugiat'
-    }];
-    vm.currentItems = vm.items;
+
+    activate();
+
+    function activate(){
+      return Restangular.allUrl('items','http://jsonplaceholder.typicode.com/posts').getList().then(function(items) {
+        vm.items = items;
+        vm.currentItems = vm.items;
+      });
+    }
 
     function toggleSelected(id) {
       if (vm.isSelected(id)) {
