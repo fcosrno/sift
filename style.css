@@ -1,0 +1,20 @@
+/* Put your css in here */
+
+.panel-filter-list {
+  height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.panel-filter-list li {
+  cursor: pointer;
+}
+.selected {
+  background-color:#dff0d8;
+}
+.list-hover li: hover, .list-hover li: nth-child(odd): hover {
+  background-color: #fcf8e3;
+}
+.list-striped li: nth-child(odd) {
+  background-color: #f9f9f9;
+  ;
+}
