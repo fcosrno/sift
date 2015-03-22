@@ -1,5 +1,5 @@
 # Sift
-Check, filter and sort carefully through a list of scrollable items. Available as an Angular JS module. Lists are loaded asynchronuously using [Restangular](https://github.com/mgonto/restangular). See the [live demo](http://fcosrno.github.io/sift/).
+Check, filter and sort through a list of scrollable items. Available as an Angular JS module. Items are loaded asynchronuously. See the [live demo](http://fcosrno.github.io/sift/).
 
 ## Roadmap
 
