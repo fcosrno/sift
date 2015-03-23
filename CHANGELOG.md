@@ -2,9 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased][unreleased]
+## [0.2.0] - 2015-03-22
 ### Changed
-- Documentation improvements
+- Switch functionality from controller to directive
+
 
 ## [0.1.0] - 2015-03-22
 ### Added
@@ -22,5 +23,5 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Gulp and README files
 
 
-[unreleased]: https://github.com/fcosrno/sift/compare/0.1.0...HEAD
-[0.1.0]: https://github.com/fcosrno/sift/compare/0.0.1...0.1.0
+[0.1.0]: https://github.com/fcosrno/sift/compare/0.1.0...0.0.1
+[0.2.0]: https://github.com/fcosrno/sift/compare/0.2.0...0.1.0
