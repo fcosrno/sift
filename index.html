@@ -2,53 +2,56 @@
 <html ng-app="sift">
 
 <head>
-  <meta charset="utf-8" />
-  <title>AngularJS Plunker</title>
-  <script>
-    document.write('<base href="' + document.location + '" />');
-  </script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="//code.angularjs.org/1.3.15/angular.js" data-semver="1.3.15"></script>
-  <script src="js/app.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Sift</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//rawgit.com/fcosrno/sift/master/app/style.css" />
+    <script src="//code.angularjs.org/1.3.15/angular.js"></script>
+    <script src="//rawgit.com/fcosrno/sift/master/app/js/app.min.js"></script>
 </head>
 
 <body>
-  <br/>
-  <br/>
-  <div class="container" ng-app='app'>
-    <div class="panel panel-default" ng-controller="PanelFilter as panel">
-      <div class="panel-heading">
-        <h3>Documents</h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-xs-6">
-            <div class="form-group">
-              <input type="text" ng-model="panel.titleFilter" class="form-control" id="exampleInputEmail3" placeholder="Filter by title...">
-            </div>
-          </div>
-          <div class="col-xs-6">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" ng-click="panel.showSelected()">Selected only
-              </label>
-            </div>
-          </div>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="text-center">
+            <h1>Sift</h1>
+            <h2 class="lead">Check and filter carefully through a list of items. </h2>
+            <hr>
+            <p>
+                <strong>Try out these tests:</strong>
+            </p>
+            <ul class="list-unstyled">
+                <li>Scroll through the items in the panels below.</li>
+                <li>Select items by clicking on them.</li>
+                <li>Filter items by writing on the input field, the select those.</li>
+                <li>Click on "Selected only" to see what you have selected.</li>
+                <li>Refresh page to see spinner icon while items load asynchronously.</li>
+            </ul>
         </div>
-      </div>
-      <ul class="list-group list-striped list-hover panel-filter-list">
-        <li ng-click="panel.toggleSelected(item.id)" class="list-group-item" ng-class="{'selected': panel.isSelected(item.id)}" ng-repeat="item in panel.currentItems | filter:panel.titleFilter | orderBy:'title'">
-          <i ng-if="!panel.isSelected(item.id)" class="fa fa-circle-thin"></i>
-          <i ng-if="panel.isSelected(item.id)" class="fa fa-check"></i>
-          {{item.title}}
-        </li>
-      </ul>
-      <input type="hidden" name="selected_items" value="{{panel.selectedItems.toString()}}">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Posts</h3>
+                <p>Fetches JSON from <a href="http://jsonplaceholder.typicode.com/posts">http://jsonplaceholder.typicode.com/posts</a>
+                </p>
+                <div sift-panel url="http://jsonplaceholder.typicode.com/posts" title-as="title"></div>
+            </div>
+            <div class="col-sm-6">
+                <h3>Albums</h3>
+                <p>Fetches JSON from <a href="http://jsonplaceholder.typicode.com/albums">http://jsonplaceholder.typicode.com/albums</a>
+                </p>
+                <div sift-panel url="http://jsonplaceholder.typicode.com/albums" title-as="title"></div>
+            </div>
+        </div>
     </div>
-  </div>
-
+    <br>
+    <br>
+    <div class="text-center">
+        <a href="https://github.com/fcosrno/sift" class="btn btn-default btn-lg">View the Github project</a>
+    </div>
+    <br>
+    <br>
 </body>
 
 </html>
