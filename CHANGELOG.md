@@ -23,5 +23,5 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Gulp and README files
 
 
-[0.1.0]: https://github.com/fcosrno/sift/compare/0.1.0...0.0.1
-[0.2.0]: https://github.com/fcosrno/sift/compare/0.2.0...0.1.0
+[0.1.0]: https://github.com/fcosrno/sift/compare/0.0.1...0.1.0
+[0.2.0]: https://github.com/fcosrno/sift/compare/0.1.0...0.2.0
