@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [unreleased] Unreleased
+
+###[0.2.3] - 2015-03-26
 ### Added
 - FieldAs attribute to customize hidden input name
+- Clear search field on Selected only checkbox click
 ### Changed
 - Tell directive to replace HTML
 ### Fixed
@@ -40,7 +43,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Initial HTML and JS code
 - Gulp and README files
 
-[unreleased]: https://github.com/fcosrno/sift/compare/0.2.2...HEAD
+[unreleased]: https://github.com/fcosrno/sift/compare/0.2.3...HEAD
+[0.2.3]: https://github.com/fcosrno/sift/compare/0.2.2...0.2.3
 [0.2.2]: https://github.com/fcosrno/sift/compare/0.2.1...0.2.2
 [0.2.1]: https://github.com/fcosrno/sift/compare/0.1.0...0.2.1
 [0.1.0]: https://github.com/fcosrno/sift/compare/0.0.1...0.1.0

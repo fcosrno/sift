@@ -18,6 +18,10 @@
 	top:5px;
 	right:21px;
 }
+.btn-reset:focus{
+    border:none;
+    outline: none;
+}
 .list-hover li:hover, .list-hover li:nth-child(odd):hover {
   background-color: #fcf8e3;
 }

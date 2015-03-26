@@ -89,6 +89,7 @@
                     }
                 });
             }
+            vm.titleFilter='';
             vm.showSelectedStatus = !vm.showSelectedStatus;
         }
     }

@@ -39,10 +39,7 @@ All the CSS classes used by Sift to style the panel can be found in the *style.c
 
 ## Roadmap
 
-###[0.2.2]
-- Clear search field on Selected only checkbox click
-
-###[0.2.3]
+###[0.3.0]
 - Add testing
 
 ### [x.x.x]
