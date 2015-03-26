@@ -3,6 +3,17 @@ Check, filter and sort through a list of scrollable items. Available as an Angul
 
 ## Quick Usage
 
+This is all you need to start using all the Sift features.
+
+	// Add Sift as a dependency to your app
+	angular.module('your-app', ['sift']);
+	
+	// Use the sift-panel directive in your HTML
+	<div sift-panel url="http://jsonplaceholder.typicode.com/posts"></div>
+
+Make sure the `url` attribute points to a JSON with an *id* and *title* field. If you don't have a title field you can let Sift know with the `title-as` attribute:
+
+	// Display and sort by the "name" field instead of "title"
 	<div sift-panel url="http://jsonplaceholder.typicode.com/posts" title-as="name"></div>
 
 
@@ -16,5 +27,6 @@ Sift depends on Angular. The HTML is based on [Bootstrap's Panel markup](http://
 - Add testing
 
 ### [x.x.x]
+- Allow user to modify HTML markup
 - Provide a lazy loading solution for long items (>2k?)
 - Allow user to define loading technique: all or lazy
