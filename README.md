@@ -21,6 +21,10 @@ Make sure the `url` attribute points to a JSON with an *id* and *title* field. I
 
 Sift depends on Angular. The HTML is based on [Bootstrap's Panel markup](http://getbootstrap.com/components/#panels) and uses [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/), but either library is really optional.
 
+## Stylesheet
+
+All the CSS classes used by Sift to style the panel can be found in the *style.css* file in the app folder. You can copy it as a baseline and modify to your needs.
+
 ## Roadmap
 
 ###[0.2.2]
