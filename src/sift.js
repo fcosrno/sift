@@ -46,9 +46,22 @@
         function getItems() {
             return DataService.getItems(vm.url)
                 .then(function(data) {
-                    vm.items = vm.currentItems = data;
-                    return vm.items;
+                    return parseItems(data);
                 });
+        }
+
+        // Converts keys to title-as if needed
+        function parseItems(items){
+            if(vm.titleAs){
+                var parsedItems;
+               angular.forEach(items, function(item) {
+                    Object.defineProperty(item, 'title',
+                    Object.getOwnPropertyDescriptor(item, vm.titleAs));
+                    delete item[vm.titleAs];
+                });
+            }
+            vm.items = vm.currentItems = items;
+            return vm.items;
         }
 
         function toggleSelected(id) {
