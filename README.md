@@ -28,6 +28,7 @@ All the CSS classes used by Sift to style the panel can be found in the *style.c
 ## Roadmap
 
 ###[0.2.2]
+- Tell directive to replace HTML
 - Clear search field on Selected only checkbox click
 - Allow user to customize CSV input name
 
