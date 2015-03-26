@@ -28,6 +28,7 @@
                 <li>Filter items by writing on the input field, the select those.</li>
                 <li>Click on "Selected only" to see what you have selected.</li>
                 <li>Refresh page to see spinner icon while items load asynchronously.</li>
+                <li>Notice users lists by <i>name</i> and posts by <i>title</i>. This is possible beacause the attribute <i>title-as</i> allows field name customization.</li>
             </ul>
         </div>
         <div class="row">
@@ -35,13 +36,13 @@
                 <h3>Posts</h3>
                 <p>Fetches JSON from <a href="http://jsonplaceholder.typicode.com/posts">http://jsonplaceholder.typicode.com/posts</a>
                 </p>
-                <div sift-panel url="http://jsonplaceholder.typicode.com/posts" title-as="title"></div>
+                <div sift-panel url="http://jsonplaceholder.typicode.com/posts"></div>
             </div>
             <div class="col-sm-6">
-                <h3>Albums</h3>
-                <p>Fetches JSON from <a href="http://jsonplaceholder.typicode.com/albums">http://jsonplaceholder.typicode.com/albums</a>
+                <h3>Users</h3>
+                <p>Fetches JSON from <a href="http://jsonplaceholder.typicode.com/users">http://jsonplaceholder.typicode.com/users</a>
                 </p>
-                <div sift-panel url="http://jsonplaceholder.typicode.com/albums" title-as="title"></div>
+                <div sift-panel url="http://jsonplaceholder.typicode.com/users" title-as="name"></div>
             </div>
         </div>
     </div>
