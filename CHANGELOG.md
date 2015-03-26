@@ -3,11 +3,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [unreleased] Unreleased
+### Changed
+- Improve documentation
+- CSS fixes
+
 ## [0.2.1] - 2015-03-26
 ### Added
 - Functionality to customize title field with title-as attribute
 - Display count of items
-- Add clear button in filter input
+- Clear button in filter input
 
 ## [0.2.0] - 2015-03-22
 ### Changed
@@ -27,6 +32,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Initial HTML and JS code
 - Gulp and README files
 
+[unreleased]: https://github.com/fcosrno/sift/compare/0.2.1...HEAD
 [0.2.1]: https://github.com/fcosrno/sift/compare/0.1.0...0.2.1
 [0.1.0]: https://github.com/fcosrno/sift/compare/0.0.1...0.1.0
 [0.2.0]: https://github.com/fcosrno/sift/compare/0.1.0...0.2.0
