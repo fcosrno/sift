@@ -4,10 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [unreleased] Unreleased
+
+###[0.2.4] - 2015-03-26
 ### Added
 - Attribute to pass in pre-selected values
 ### Fixed
 - CSS background color on selected items
+### Added
+- Documentation updates
 
 ###[0.2.3] - 2015-03-26
 ### Added
@@ -47,7 +51,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Initial HTML and JS code
 - Gulp and README files
 
-[unreleased]: https://github.com/fcosrno/sift/compare/0.2.3...HEAD
+[unreleased]: https://github.com/fcosrno/sift/compare/0.2.4...HEAD
+[0.2.4]: https://github.com/fcosrno/sift/compare/0.2.3...0.2.4
 [0.2.3]: https://github.com/fcosrno/sift/compare/0.2.2...0.2.3
 [0.2.2]: https://github.com/fcosrno/sift/compare/0.2.1...0.2.2
 [0.2.1]: https://github.com/fcosrno/sift/compare/0.1.0...0.2.1
