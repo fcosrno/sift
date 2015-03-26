@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased] Unreleased
 ### Added
 - Attribute to pass in pre-selected values
+### Fixed
+- CSS background color on selected items
 
 ###[0.2.3] - 2015-03-26
 ### Added
