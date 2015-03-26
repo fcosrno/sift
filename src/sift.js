@@ -54,16 +54,18 @@
                 });
         }
 
-        // Converts keys to title-as if needed
+        // Makes sure id is a typeof number and convert title keys if needed
         function parseItems(items){
-            if(vm.titleAs){
-                var parsedItems;
-               angular.forEach(items, function(item) {
+            var parsedItems;
+            angular.forEach(items, function(item) {
+                item.id = Number(item.id);
+                // Switch title key name
+                if(vm.titleAs){
                     Object.defineProperty(item, 'title',
                     Object.getOwnPropertyDescriptor(item, vm.titleAs));
                     delete item[vm.titleAs];
-                });
-            }
+                }
+            });
             vm.items = vm.currentItems = items;
             return vm.items;
         }
