@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.2.0] - 2015-03-22
 ### Changed
 - Switch functionality from controller to directive
+- Display count of items
 
 
 ## [0.1.0] - 2015-03-22
