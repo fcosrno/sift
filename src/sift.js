@@ -12,7 +12,8 @@
             scope: {
                 url: '@',
                 titleAs: '@',
-                fieldAs: '@'
+                fieldAs: '@',
+                value:'@',
             },
             controller: SiftController,
             controllerAs: 'vm',
@@ -42,6 +43,7 @@
                 vm.loading = false;
                 if (vm.items.length < 1) vm.errors = "There are no items to display.";
                 if(!vm.fieldAs)vm.fieldAs = "selected_items";
+                if(vm.value)vm.selectedItems=JSON.parse("[" + vm.value + "]");
             });
         }
 

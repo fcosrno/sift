@@ -39,6 +39,9 @@ All the CSS classes used by Sift to style the panel can be found in the *style.c
 
 ## Roadmap
 
+###[0.2.4]
+- Fix selected green on every other
+
 ###[0.3.0]
 - Add testing
 
