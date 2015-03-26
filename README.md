@@ -12,11 +12,6 @@ Sift depends on Angular. The HTML is based on [Bootstrap's Panel markup](http://
 
 ## Roadmap
 
-###[0.2.1]
-- Functionality to customize title field with title-as attribute
-- Display count of items
-- Add clear button in filter input
-
 ###[0.2.2]
 - Add testing
 
