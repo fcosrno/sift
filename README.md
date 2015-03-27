@@ -62,6 +62,7 @@ Take a look at the [CHANGELOG](https://github.com/fcosrno/sift/blob/master/CHANG
 
 ###[0.3.0]
 - Add testing
+- When clicking on "Selected only" scroll lists window to top
 
 ### [x.x.x]
 - Allow user to modify HTML markup
