@@ -60,11 +60,15 @@ All the CSS classes used by Sift to style the panel can be found in the *style.c
 
 Take a look at the [CHANGELOG](https://github.com/fcosrno/sift/blob/master/CHANGELOG.md) for completed tasks.
 
+###[0.2.6]
+- When clicking on "Selected only" scroll lists window to top
+- Button to refresh list
+
 ###[0.3.0]
 - Add testing
-- When clicking on "Selected only" scroll lists window to top
 
 ### [x.x.x]
+- Allow triggering the list refresh behavior outside scope
 - Allow user to modify HTML markup
 - Provide a lazy loading solution for long items (>2k?)
 - Allow user to define loading technique: all or lazy
